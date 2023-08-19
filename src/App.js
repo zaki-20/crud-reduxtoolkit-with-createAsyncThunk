@@ -1,10 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Create from "./components/Create";
+import Navbar from "./components/Navbar";
+import Read from "./components/Read";
 
 
 function App() {
   return (
-    <div className="">
-     
-    </div>
+
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Create />} />
+        <Route path="/read" element={<Read />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
